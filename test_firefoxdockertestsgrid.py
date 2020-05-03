@@ -18,21 +18,21 @@ class HackerNewsSearchTest(unittest.TestCase):
 
     def setUp(self):
 
-        randomint = 'Downloads_'+str(randint(111, 9999999999))
-        folder = r'D:/MapFolderForDocker/'+randomint
-        while(True):
-            if(os.path.isdir(folder)):
-                folder = folder+"1"
-            else:
-                os.mkdir(folder)
-                break;
+        # randomint = 'Downloads_'+str(randint(111, 9999999999))
+        # folder = r'D:/MapFolderForDocker/'+randomint
+        # while(True):
+        #     if(os.path.isdir(folder)):
+        #         folder = folder+"1"
+        #     else:
+        #         os.mkdir(folder)
+        #         break;
 
         fp=webdriver.FirefoxProfile()
-        fp.set_preference("browser.download.folderList",2)
-        fp.set_preference("browser.download.manager.showWhenStarting",False)
-        fp.set_preference("browser.download.dir",r'/home/seluser/'+randomint)
-        fp.set_preference("browser.helperApps.neverAsk.saveToDisk","octet/stream,text/csv;charset=utf-8;,"
-                                                                   "application/zip, application/octet-stream");
+        # fp.set_preference("browser.download.folderList",2)
+        # fp.set_preference("browser.download.manager.showWhenStarting",False)
+        # fp.set_preference("browser.download.dir",r'/home/seluser/'+randomint)
+        # fp.set_preference("browser.helperApps.neverAsk.saveToDisk","octet/stream,text/csv;charset=utf-8;,"
+        #                                                            "application/zip, application/octet-stream");
         opts=Options()
         opts.profile=fp
         capabilities=DesiredCapabilities.FIREFOX.copy()
